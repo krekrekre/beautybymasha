@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* Brand palette — adjust per client (see TEMPLATE.md). Mirrors design tokens in design.md. */
+:root {
+  --background: #fdf6f4;
+  --foreground: #3a302c;
+  --body-muted: #6b5e5e;
+  --eyebrow: #9a8580;
+  --primary: #7c5a5a;
+  --on-primary: #ffffff;
+  --primary-dim: #6b4a4a;
+  --primary-container: #e8ddd9;
+  --outline-variant: #beafa8;
+  --surface-container-low: #f0eae8;
+  --surface-container-highest: #ffffff;
+  --surface-tint: rgba(124, 84, 88, 0.12);
+  --shadow-ambient: 0 10px 40px rgba(58, 48, 44, 0.06);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-body-muted: var(--body-muted);
+  --color-eyebrow: var(--eyebrow);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-dim: var(--primary-dim);
+  --color-primary-container: var(--primary-container);
+  --color-outline-variant: var(--outline-variant);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-surface-tint: var(--surface-tint);
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-noto-serif), ui-serif, Georgia, serif;
+  --radius-full: 9999px;
+  --radius-xl: 1.5rem;
+  --radius-md: 0.75rem;
+}
+
+body {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.5) 0%, rgba(253, 246, 244, 0) 50%),
+    radial-gradient(circle at 100% 100%, rgba(240, 234, 232, 0.6) 0%, rgba(240, 234, 232, 0) 60%),
+    radial-gradient(circle at 0% 100%, rgba(240, 234, 232, 0.6) 0%, rgba(240, 234, 232, 0) 60%);
+  background-attachment: fixed;
+  color: var(--foreground);
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+}
+
+html {
+  background-color: var(--background);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Match in-page scroll landing: title in upper viewport, below header */
+  scroll-padding-top: max(6.25rem, 12vh);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  scroll-behavior: inherit;
+}
+
+@utility label-md {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@utility animate-fade-in-up {
+  animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@utility animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
