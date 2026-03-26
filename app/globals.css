@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
-/* Brand palette — adjust per client (see TEMPLATE.md). Mirrors design tokens in design.md. */
+/* Brand palette — pink accent (#fd099b) + black typography */
 :root {
-  --background: #fdf6f4;
-  --foreground: #3a302c;
-  --body-muted: #6b5e5e;
-  --eyebrow: #9a8580;
-  --primary: #7c5a5a;
+  --background: #fef8fb;
+  --foreground: #0a0a0a;
+  --body-muted: #404040;
+  --eyebrow: #9a3d6e;
+  --primary: #fd099b;
   --on-primary: #ffffff;
-  --primary-dim: #6b4a4a;
-  --primary-container: #e8ddd9;
-  --outline-variant: #beafa8;
-  --surface-container-low: #f0eae8;
+  --primary-dim: #d90882;
+  --primary-container: #ffe8f3;
+  --outline-variant: #e5c8d6;
+  --surface-container-low: #faf0f5;
   --surface-container-highest: #ffffff;
-  --surface-tint: rgba(124, 84, 88, 0.12);
-  --shadow-ambient: 0 10px 40px rgba(58, 48, 44, 0.06);
+  --surface-tint: rgba(253, 9, 155, 0.1);
+  --shadow-ambient: 0 10px 40px rgba(0, 0, 0, 0.07);
 }
 
 @theme inline {
@@ -30,8 +30,8 @@
   --color-surface-container-low: var(--surface-container-low);
   --color-surface-container-highest: var(--surface-container-highest);
   --color-surface-tint: var(--surface-tint);
-  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-noto-serif), ui-serif, Georgia, serif;
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
   --radius-full: 9999px;
   --radius-xl: 1.5rem;
   --radius-md: 0.75rem;
@@ -40,9 +40,9 @@
 body {
   background-color: var(--background);
   background-image:
-    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.5) 0%, rgba(253, 246, 244, 0) 50%),
-    radial-gradient(circle at 100% 100%, rgba(240, 234, 232, 0.6) 0%, rgba(240, 234, 232, 0) 60%),
-    radial-gradient(circle at 0% 100%, rgba(240, 234, 232, 0.6) 0%, rgba(240, 234, 232, 0) 60%);
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.85) 0%, rgba(254, 248, 251, 0) 55%),
+    radial-gradient(circle at 100% 80%, rgba(253, 9, 155, 0.06) 0%, rgba(254, 248, 251, 0) 45%),
+    radial-gradient(circle at 0% 100%, rgba(0, 0, 0, 0.02) 0%, rgba(254, 248, 251, 0) 50%);
   background-attachment: fixed;
   color: var(--foreground);
   position: relative;

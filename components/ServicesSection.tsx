@@ -110,7 +110,7 @@ function CenovnikCollapse({
         role="region"
         aria-labelledby={ariaLabelledBy || undefined}
         aria-label={ariaLabel ?? undefined}
-        className="border-t border-primary/10 bg-[#D9C5B9] px-8 pb-8 pt-6 font-sans text-[#4A4A4A] sm:px-10 sm:pb-10 sm:pt-7"
+        className="border-t border-primary/10 bg-primary-container px-8 pb-8 pt-6 font-sans text-foreground/85 sm:px-10 sm:pb-10 sm:pt-7"
       >
         {children}
       </div>
@@ -298,7 +298,7 @@ export function ServicesSection() {
               <li key={title} className="group relative">
               <div className="absolute -inset-[1px] rounded-[1.35rem] bg-gradient-to-b from-primary/15 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" aria-hidden />
               {priceList ? (
-                <div className="relative flex min-h-[260px] h-full flex-col overflow-hidden rounded-[1.3rem] border border-primary/5 bg-surface-container-highest text-left shadow-[0_8px_30px_rgba(58,48,44,0.04)] transition-[transform,box-shadow] duration-500 ease-out group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_40px_rgba(58,48,44,0.08)] sm:min-h-[290px] lg:min-h-[310px]">
+                <div className="relative flex min-h-[260px] h-full flex-col overflow-hidden rounded-[1.3rem] border border-primary/5 bg-surface-container-highest text-left shadow-[0_8px_30px_rgba(0,0,0,0.05)] transition-[transform,box-shadow] duration-500 ease-out group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_40px_rgba(253,9,155,0.12)] sm:min-h-[290px] lg:min-h-[310px]">
                   <div className="absolute top-0 right-0 -mt-10 -mr-10 h-40 w-40 rounded-full bg-primary/[0.03] transition-transform duration-700 ease-in-out group-hover:scale-[1.8] group-hover:bg-primary/[0.04]" aria-hidden />
 
                   <button
@@ -346,7 +346,7 @@ export function ServicesSection() {
                             priceList.tabsAriaLabel ??
                             site.services.priceTabsAriaLabel
                           }
-                          className="relative mb-4 flex w-full cursor-default select-none rounded-lg border border-primary/15 bg-foreground/5 p-0.5 shadow-[inset_0_1px_1px_rgba(58,48,44,0.04)] sm:mb-5"
+                          className="relative mb-4 flex w-full cursor-default select-none rounded-lg border border-primary/15 bg-foreground/5 p-0.5 shadow-[inset_0_1px_1px_rgba(0,0,0,0.05)] sm:mb-5"
                         >
                           {priceList.sections.map((section, i) => {
                             const selected = i === activeSectionIdx;
@@ -362,9 +362,9 @@ export function ServicesSection() {
                                 onClick={() => setCenovnikTab(title, i)}
                                 className={`relative min-h-9 flex-1 cursor-pointer touch-manipulation rounded-md px-2 py-1.5 text-center font-serif text-xs font-semibold transition-[color,background-color,box-shadow,transform] duration-300 ease-out sm:min-h-9 sm:px-3 sm:py-2 sm:text-sm ${
                                   selected
-                                    ? "bg-white text-primary shadow-[0_2px_8px_rgba(124,90,90,0.12),0_0_0_1px_rgba(124,90,90,0.1)]"
-                                    : "text-[#4A4A4A]/85 hover:bg-white/35 hover:text-primary"
-                                } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 focus-visible:ring-offset-[#D9C5B9] active:scale-[0.98`}
+                                    ? "bg-white text-primary shadow-[0_2px_10px_rgba(253,9,155,0.18),0_0_0_1px_rgba(253,9,155,0.2)]"
+                                    : "text-foreground/80 hover:bg-white/50 hover:text-primary"
+                                } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 focus-visible:ring-offset-primary-container active:scale-[0.98]`}
                               >
                                 {"tabLabel" in section && section.tabLabel
                                   ? section.tabLabel
@@ -380,7 +380,7 @@ export function ServicesSection() {
                         >
                           <h4
                             id={sectionHeadingIds[activeSectionIdx]}
-                            className="mb-3 font-sans text-base font-bold uppercase tracking-wide text-[#4A4A4A] sm:mb-4 sm:text-lg"
+                            className="mb-3 font-sans text-base font-bold uppercase tracking-wide text-foreground sm:mb-4 sm:text-lg"
                           >
                             {priceList.sections[activeSectionIdx].heading}
                           </h4>
@@ -391,7 +391,7 @@ export function ServicesSection() {
                                   key={`${activeSectionIdx}-${name}`}
                                   className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1"
                                 >
-                                  <span className="text-[#4A4A4A]">
+                                  <span className="text-foreground/85">
                                     {name}
                                   </span>
                                   <span className="whitespace-nowrap text-right font-extrabold text-black">
@@ -411,7 +411,7 @@ export function ServicesSection() {
                         <div key={section.heading}>
                           <h4
                             id={sectionHeadingIds[secIdx]}
-                            className="mb-5 font-sans text-lg font-bold uppercase tracking-wide text-[#4A4A4A] sm:mb-6 sm:text-xl"
+                            className="mb-5 font-sans text-lg font-bold uppercase tracking-wide text-foreground sm:mb-6 sm:text-xl"
                           >
                             {section.heading}
                           </h4>
@@ -421,7 +421,7 @@ export function ServicesSection() {
                                 key={`${secIdx}-${name}`}
                                 className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1"
                               >
-                                <span className="text-[#4A4A4A]">{name}</span>
+                                <span className="text-foreground/85">{name}</span>
                                 <span className="whitespace-nowrap text-right font-extrabold text-black">
                                   {amount}{" "}
                                   <span className="font-extrabold lowercase">
@@ -439,7 +439,7 @@ export function ServicesSection() {
                   <div className="pointer-events-none absolute bottom-0 left-0 h-1 w-0 bg-primary opacity-50 transition-[width] duration-500 ease-out group-hover:w-full" aria-hidden />
                 </div>
               ) : (
-                <article className="relative flex min-h-[260px] h-full flex-col overflow-hidden rounded-[1.3rem] bg-surface-container-highest border border-primary/5 p-8 text-left shadow-[0_8px_30px_rgba(58,48,44,0.04)] sm:min-h-[290px] sm:p-10 lg:min-h-[310px] lg:p-12 transition-[transform,box-shadow] duration-500 ease-out group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_40px_rgba(58,48,44,0.08)]">
+                <article className="relative flex min-h-[260px] h-full flex-col overflow-hidden rounded-[1.3rem] bg-surface-container-highest border border-primary/5 p-8 text-left shadow-[0_8px_30px_rgba(0,0,0,0.05)] sm:min-h-[290px] sm:p-10 lg:min-h-[310px] lg:p-12 transition-[transform,box-shadow] duration-500 ease-out group-hover:-translate-y-1.5 group-hover:shadow-[0_20px_40px_rgba(253,9,155,0.12)]">
                   <div className="absolute top-0 right-0 -mt-10 -mr-10 h-40 w-40 rounded-full bg-primary/[0.03] transition-transform duration-700 ease-in-out group-hover:scale-[1.8] group-hover:bg-primary/[0.04]" aria-hidden />
 
                   <div className="relative mb-8 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-surface-container-low text-primary transition-[transform,background-color,color] duration-500 group-hover:bg-primary group-hover:text-on-primary">

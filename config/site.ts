@@ -179,68 +179,6 @@ export const site = {
 
   servicesList: [
     {
-      title: "Laserska Epilacija",
-      description:
-        "Ciljana svetlosna energija za dugotrajnu glatkoću uz manje tretmana i mekši ponovni rast.",
-      icon: "threading",
-      priceList: {
-        sections: [
-          {
-            tabLabel: "Žene",
-            heading: "Cenovnik – žene",
-            rows: [
-              { name: "Celo telo", amount: "7.000", currency: "rsd" },
-              { name: "Pazuh", amount: "1.500", currency: "rsd" },
-              { name: "Bikini linija", amount: "1.800", currency: "rsd" },
-              { name: "Intimna regija", amount: "2.800", currency: "rsd" },
-              { name: "Noge (cele)", amount: "3.000", currency: "rsd" },
-              { name: "Noge do kolena", amount: "2.000", currency: "rsd" },
-              { name: "Ruke", amount: "2.000", currency: "rsd" },
-              { name: "Lice celo", amount: "1.500", currency: "rsd" },
-              { name: "Brada / Nausnice", amount: "1.000", currency: "rsd" },
-              { name: "Stomak", amount: "1.500", currency: "rsd" },
-              { name: "Leđa", amount: "1.500", currency: "rsd" },
-            ],
-          },
-          {
-            tabLabel: "Muškarci",
-            heading: "Cenovnik – muškarci",
-            rows: [
-              { name: "Celo telo", amount: "9.000", currency: "rsd" },
-              { name: "Leđa", amount: "3.000", currency: "rsd" },
-              { name: "Grudi", amount: "3.000", currency: "rsd" },
-              { name: "Ramena", amount: "2.000", currency: "rsd" },
-              { name: "Pazuh", amount: "1.800", currency: "rsd" },
-              { name: "Ruke", amount: "2.500", currency: "rsd" },
-              { name: "Noge", amount: "3.500", currency: "rsd" },
-              { name: "Vrat (zadnji deo)", amount: "1.500", currency: "rsd" },
-              { name: "Nos / Uši", amount: "1.000", currency: "rsd" },
-              {
-                name: "Lice (brada, obrazi)",
-                amount: "2.000",
-                currency: "rsd",
-              },
-              { name: "Stomak", amount: "3.000", currency: "rsd" },
-            ],
-          },
-        ],
-      },
-    },
-    {
-      title: "Spray Tan",
-      description:
-        "Ravnomerna boja prilagođena vašem tenu za prirodan, preplanuli izgled svake sezone.",
-      icon: "skin",
-      priceList: {
-        sections: [
-          {
-            heading: "Cenovnik",
-            rows: [{ name: "Spray tan", amount: "2.500", currency: "rsd" }],
-          },
-        ],
-      },
-    },
-    {
       title: "Manikir",
       description:
         "Profesionalna nega i oblikovanje noktiju na rukama za uredan, čist i dugotrajan rezultat prilagođen vašem stilu.",

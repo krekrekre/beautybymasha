@@ -51,7 +51,7 @@ export function PhilosophySection() {
             </div>
 
             <blockquote
-              className="relative mx-auto -mt-6 w-[92%] max-w-[19rem] rounded-2xl bg-surface-container-highest px-6 py-5 text-center shadow-[0_4px_12px_rgba(58,48,44,0.08)] sm:absolute sm:-bottom-4 sm:right-[-1rem] sm:mx-0 sm:mt-0 sm:w-[15.5rem] sm:text-left sm:shadow-[0_12px_30px_rgba(58,48,44,0.12)] md:right-[1rem] lg:right-[-1.2rem]"
+              className="relative mx-auto -mt-6 w-[92%] max-w-[19rem] rounded-2xl bg-surface-container-highest px-6 py-5 text-center shadow-[0_4px_12px_rgba(0,0,0,0.07)] sm:absolute sm:-bottom-4 sm:right-[-1rem] sm:mx-0 sm:mt-0 sm:w-[15.5rem] sm:text-left sm:shadow-[0_12px_30px_rgba(253,9,155,0.1)] md:right-[1rem] lg:right-[-1.2rem]"
               aria-label="Brand quote"
             >
               <p className="font-serif text-[1.1rem] italic leading-7 text-primary/85">

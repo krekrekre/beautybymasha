@@ -154,7 +154,7 @@ export function HeroSection() {
                   className="absolute -inset-3 rounded-[3.5rem] border border-primary/10 transition-colors duration-500 group-hover:border-primary/25"
                   aria-hidden
                 />
-                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[3.25rem] bg-surface-container-low shadow-[0_20px_60px_-15px_rgba(58,48,44,0.12)]">
+                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[3.25rem] bg-surface-container-low shadow-[0_20px_60px_-15px_rgba(0,0,0,0.12)]">
                   <Image
                     src={site.hero.imageSrc}
                     alt={site.hero.imageAltDesktop}

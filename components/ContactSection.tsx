@@ -138,7 +138,7 @@ export function ContactSection() {
             {infoCards.map(({ title, lines, Icon }) => (
               <article
                 key={title}
-                className="rounded-2xl border border-outline-variant/15 bg-surface-container-highest px-6 py-5 shadow-[0_6px_18px_rgba(58,48,44,0.04)]"
+                className="rounded-2xl border border-outline-variant/15 bg-surface-container-highest px-6 py-5 shadow-[0_6px_18px_rgba(0,0,0,0.05)]"
               >
                 <div className="flex items-start gap-4">
                   <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -159,7 +159,7 @@ export function ContactSection() {
             ))}
           </div>
 
-          <article className="rounded-2xl border border-outline-variant/15 bg-surface-container-highest px-6 py-6 shadow-[0_6px_18px_rgba(58,48,44,0.04)] sm:px-8 sm:py-7">
+          <article className="rounded-2xl border border-outline-variant/15 bg-surface-container-highest px-6 py-6 shadow-[0_6px_18px_rgba(0,0,0,0.05)] sm:px-8 sm:py-7">
             <h3 className="font-serif text-[2.35rem] font-semibold leading-tight text-primary">
               {site.contact.formTitle}
             </h3>
@@ -173,7 +173,7 @@ export function ContactSection() {
                   name="name"
                   type="text"
                   placeholder={site.contact.formLabels.namePlaceholder}
-                  className="mt-2.5 w-full rounded-[0.75rem] border border-outline-variant/15 bg-[#faf6f5] px-4 py-3 text-base text-foreground placeholder:text-body-muted/65 outline-none transition focus:border-primary/35"
+                  className="mt-2.5 w-full rounded-[0.75rem] border border-outline-variant/15 bg-surface-container-low px-4 py-3 text-base text-foreground placeholder:text-body-muted/65 outline-none transition focus:border-primary/35"
                 />
               </div>
               <div>
@@ -185,7 +185,7 @@ export function ContactSection() {
                   name="email"
                   type="email"
                   placeholder={site.contact.formLabels.emailPlaceholder}
-                  className="mt-2.5 w-full rounded-[0.75rem] border border-outline-variant/15 bg-[#faf6f5] px-4 py-3 text-base text-foreground placeholder:text-body-muted/65 outline-none transition focus:border-primary/35"
+                  className="mt-2.5 w-full rounded-[0.75rem] border border-outline-variant/15 bg-surface-container-low px-4 py-3 text-base text-foreground placeholder:text-body-muted/65 outline-none transition focus:border-primary/35"
                 />
               </div>
               <div>
@@ -197,7 +197,7 @@ export function ContactSection() {
                   name="phone"
                   type="tel"
                   placeholder={site.contact.formLabels.phonePlaceholder}
-                  className="mt-2.5 w-full rounded-[0.75rem] border border-outline-variant/15 bg-[#faf6f5] px-4 py-3 text-base text-foreground placeholder:text-body-muted/65 outline-none transition focus:border-primary/35"
+                  className="mt-2.5 w-full rounded-[0.75rem] border border-outline-variant/15 bg-surface-container-low px-4 py-3 text-base text-foreground placeholder:text-body-muted/65 outline-none transition focus:border-primary/35"
                 />
               </div>
               <div>
@@ -212,7 +212,7 @@ export function ContactSection() {
                   name="message"
                   rows={4}
                   placeholder={site.contact.formLabels.messagePlaceholder}
-                  className="mt-2.5 w-full resize-none rounded-[0.75rem] border border-outline-variant/15 bg-[#faf6f5] px-4 py-3 text-base text-foreground placeholder:text-body-muted/65 outline-none transition focus:border-primary/35"
+                  className="mt-2.5 w-full resize-none rounded-[0.75rem] border border-outline-variant/15 bg-surface-container-low px-4 py-3 text-base text-foreground placeholder:text-body-muted/65 outline-none transition focus:border-primary/35"
                 />
               </div>
               <button
