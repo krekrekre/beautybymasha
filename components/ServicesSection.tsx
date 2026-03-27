@@ -15,6 +15,28 @@ const CENOVNIK_EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
 const CENOVNIK_MOTION_MS_DEFAULT = 480;
 const CENOVNIK_MOTION_MS_REDUCED = 200;
 
+function ChevronDownIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden
+    >
+      <path
+        d="M4 6l4 4 4-4"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 /** Measured max-height + rAF so the browser paints start/end values (CSS max-height can otherwise skip transitions). */
 function CenovnikCollapse({
   expanded,
@@ -318,8 +340,11 @@ export function ServicesSection() {
                     <p className="mt-4 max-w-[28ch] text-[1.05rem] leading-8 text-body-muted group-hover:text-foreground/80 transition-colors duration-300">
                       {description}
                     </p>
-                    <p className="label-md text-eyebrow mt-auto pt-8 text-center transition-colors duration-300 group-hover:text-primary">
+                    <p className="label-md text-eyebrow mt-auto flex items-center justify-center gap-2 pt-8 text-center transition-colors duration-300 group-hover:text-primary">
                       {site.services.priceListToggleLabel}
+                      <ChevronDownIcon
+                        className={`shrink-0 transition-transform duration-500 ease-out ${expanded ? "rotate-180" : "rotate-0"}`}
+                      />
                     </p>
                   </button>
 
